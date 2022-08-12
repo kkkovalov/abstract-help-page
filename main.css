@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.icon, #links{
+    display: none;
+}
+
+nav{
+    background-color: #000000;
+    padding: 1em 4em;
+    display: flex;
+    position: relative;
+    margin: 0;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    padding: 0 .8em;
+}
+#abstract::before{
+    content:"";
+    height: 1.5em;
+    background-color: white;
+    width: .1em;
+    position: absolute;
+    top: 1.4em;
+    left: 10em;
+}
+.nav-left{
+    width:50%;
+    padding: .5em 0;
+}
+.nav-right{
+    width: 50%;
+    text-align: right;
+}
+#submit{
+    padding: .5em 1em;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000000;
+    color: white;
+    border: 1px solid white;
+    border-radius: .5em;
+    margin-right: .5em;
+}
+#signin{
+    padding: .5em 1.2em;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #4C5FD5;
+    color: white;
+    border: 1px solid #4C5FD5;
+    border-radius: .5em;
+}
+
+main{
+    padding: 6em 8em;
+    text-align: center;
+    background-color: #dadbf1;
+    position: relative;
+}
+
+main h1 {
+    font-weight: 400;
+    margin-bottom: .2em;
+    margin-top: 0;
+}
+
+main #search-question {
+    width: 90%;
+    padding: .5em 1em;
+    border: 1px solid grey;
+    box-shadow: 1px 1px .3em grey;
+}
+
+main #search-question:focus{
+outline: 1px ridge #4285F4;
+outline-offset: -1px;
+}
+
+.more-help{
+    padding: 6em 7em;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1.5em;
+}
+
+.help{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: "image text";
+}
+
+img{
+    grid-area: image;
+    width: 8em;
+}
+
+.text{
+    grid-area: text;
+}
+
+.text a{
+    text-decoration: none;
+    color: #4C5FD5;
+}
+.text a::after{
+    content: "→";
+    padding-left: .5em;
+}
+
+
+footer{
+    background-color: #000000;
+    color: white;
+    padding: 2em 5em;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5em;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    display: block;
+    padding-top: .2em;
+}
+
+footer .btm-empty{
+    display: none;
+}
+
+.company-contact-us h5{
+    margin-bottom: 0;
+}
+
+.logo{
+    padding-top: 8em;
+}
+
+@media (max-width: 850px){
+
+    body{
+        font-size: .8rem;
+    }
+    main{
+        padding: 4em 6em;
+    }
+
+    .more-help{
+        padding: 2em 3em;
+    }
+
+    footer{
+        font-size: .6rem;
+        gap: 1rem;
+        padding: 1em 3em;
+    }
+}
+
+@media (max-width: 650px){
+
+    body{
+        font-size: 1rem;
+    }
+
+    .nav-left{
+        width: 70%;
+        font-size: 1rem;
+    }
+    .nav-right{
+        width:30%;
+    }
+
+    footer{
+        font-size: .8rem;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        padding: 1em 2em;
+        
+    }
+
+    .logo{
+        padding-top: 2em;
+    }
+
+    footer .btm-empty{
+        display: block;
+    }
+
+    #submit, #signin{
+        display: none;
+    }
+
+    .icon{
+        display: block;
+        font-size: 1.4rem;
+        padding-top: .15em;
+    }
+    #links a{
+        background-color: rgb(24, 24, 24);
+        text-decoration: none;
+        color: white;
+        display: block;
+        text-align: right;
+        padding: .5em 3em;
+        border-bottom: .5px solid rgb(124, 124, 124);
+    }
+
+    #links a:hover{
+        background-color: #202020;
+    }
+
+    .more-help{
+        padding: 2em 3em;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+
